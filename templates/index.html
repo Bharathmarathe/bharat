@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer is churn or not</title>
+</head>
+<body>
+
+    <h1> Customer is churn or not</h1>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+    <form method="POST" action="/predict">
+        <label>Account_Length</label><br>
+        <input type="text" name="accountlength"><br><br>
+
+        <label>Numberv_Mail_Messages</label><br>
+        <input type="text" name="numbervmailmessages"><br><br>
+
+        <label>Total_Day_Minutes</label><br>
+        <input type="text" name="totaldayminutes"><br><br>
+
+        <label>Total_Day_Calls</label><br>
+        <input type="text" name="totaldaycalls"><br><br>
+
+        <label>Total_Day_Charge</label><br>
+        <input type="text" name="totaldaycharge"><br><br>
+
+        <label>Total_eve_Minutes</label><br>
+        <input type="text" name="totaleveminutes"><br><br>
+
+        <label>Total_eve_Calls</label><br>
+        <input type="text" name="totalevecalls"><br><br>
+
+        <label>Total_eve_Charge</label><br>
+        <input type="text" name="totalevecharge"><br><br>
+
+        <label>Total_Night_Minutes</label><br>
+        <input type="text" name="totalnightminutes"><br><br>
+
+        <label>Total_Night_Calls</label><br>
+        <input type="text" name="totalnightcalls"><br><br>
+
+        <label>Total_Night_Charge</label><br>
+        <input type="text" name="totalnightcharge"><br><br>
+
+        <label>Total_intl_Minutes</label><br>
+        <input type="text" name="totalintlminutes"><br><br>
+
+        <label>Total_intl_Calls</label><br>
+        <input type="text" name="totalintlcalls"><br><br>
+
+        <label>Total_intl_Charge</label><br>
+        <input type="text" name="totalintlcharge"><br><br>
+
+
+        <label>Number_Customer_service_calls</label><br>
+        <input type="text" name="numbercustomerservicecalls"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+
+</body>
+</html>
